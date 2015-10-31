@@ -1,0 +1,19 @@
+{
+  "name": "nodeAPI",
+  "version": "1.0.0",
+  "description": "A live google maps tracject",
+  "main": "sample.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "pbborel",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "socket.io": "^1.2.1"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "license": "MIT"
+}

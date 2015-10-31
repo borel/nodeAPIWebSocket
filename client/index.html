@@ -1,0 +1,156 @@
+<html>
+<head>
+
+  <title>Smoozi NYC</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
+  <meta name="author" content="ADD AUTHOR INFORMATION">
+  <meta name="robots" content="index, follow">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" type="text/css" href="./css/flipclock.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+  <!-- JS -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="./js/marathon_value.js"></script>
+  <script type="text/javascript" src="./js/chart.js"></script>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/flipclock.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+
+
+<script type="text/javascript" src="./js/script.js"></script>
+
+  <div class="header">
+    <div class="container">
+      <img class="img-responsive" src="./img/bandeau.jpg" alt="">
+    </div>
+  </div>
+  <div class="nav-bar">
+    <div class="container">
+      <ul class="nav">
+          <h3 style='color:red'><div id='message'></div></h3>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="col1">
+        <!-- Responsive images -->
+        <div id="map-canvas"></div>
+        <p></p>
+
+
+        <a class="twitter-timeline" href="https://twitter.com/GetSmoozi" data-widget-id="656399080990646272">Tweets de @GetSmoozi</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <!-- <h2> Jalabert </h2>
+
+        <h2> Landreau </h3> -->
+
+      </div>
+      <div class="col2">
+        	<img class="img-responsive" src="./img/savinaud.png" alt="">
+          <div id="clock-canvas"  class="marathon_clock_ml"></div>
+              <p></p>
+          <img class="img-responsive" src="./img/fc.png" alt=""> Fréquence Cardiaque
+          <p><p>
+        <h5><div id='hr_ml'></div></h5>
+        <p><canvas id="tab_hr_ml"></p>
+              <img class="img-responsive" src="./img/vitesse.png" alt=""> Vitesse
+              <p><p>
+          <h5> <div id='speed_ml'></div></h5>
+            <p><canvas id="tab_speed_ml"></p>
+                <img class="img-responsive" src="./img/distance.png" alt=""> Distance
+                <p><p>
+               <h5><div id='distance_ml'></div></h5>
+                <p><canvas id="tab_dist_ml"></p>
+                    <h6>Résumé</h6>
+                  <table class="table table-striped" id="table_km_ml">
+                    <thead>
+                      <tr>
+                        <th>Km</th>
+                        <th>Temps au km</th>
+                        <th>Temps total</th>
+
+                        <!-- <th>Vitesse moyenne</th>
+                        <th>FC moyenne</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+
+      </div>
+            <div class="col3">
+            <img class="img-responsive" src="./img/jalabert.png" alt="">
+            <div id="clock-canvas"  class="marathon_clock_lj"></div>
+            <p></p>
+              <img class="img-responsive" src="./img/fc.png" alt=""> Fréquence Cardiaque
+              <p><p>
+                <h5><div id='hr_lj'></div></h5>
+              <p><canvas id="tab_hr_lj"></p>
+                  <img class="img-responsive" src="./img/vitesse.png" alt=""> Vitesse
+                  <p><p>
+                <h5><div id='speed_lj'></div></h5></h5>
+                  <p><canvas id="tab_speed_lj"></p>
+                        <img class="img-responsive" src="./img/distance.png" alt=""> Distance
+                        <p><p>
+                    <h5><div id='distance_lj'></div></h5>
+                        <p><canvas id="tab_dist_lj"></p>
+                          <h6>Résumé</h6>
+                          <table class="table table-striped" id='table_km_lj'>
+                            <thead>
+                              <tr>
+                                <th>Km</th>
+                                <th>Temps au km</th>
+                                <th>Temps total</th>
+                                <!-- <th>Vitesse moyenne</th>
+                                <th>FC moyenne</th> -->
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="footer">
+                <div class="container">
+                  &copy; <a href="http://www.cityzensciences.fr/">Cityzen Sciences </a> - 2015 - b
+                </div>
+              </div>
+            </body>
+            </html>
