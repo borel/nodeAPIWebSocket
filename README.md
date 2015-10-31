@@ -1,2 +1,2 @@
 # nodeAPIWebSocket
-Add webscocket management
+Add webscocket management to socket.io
