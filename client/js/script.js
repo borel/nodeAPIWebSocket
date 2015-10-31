@@ -324,7 +324,7 @@ window.onload = function(){
     /**************/
 
     //var socket = io.connect('http://localhost:8082');
-    var socket = io.connect('https://guarded-sierra-2714.herokuapp.com');
+    var socket = io.connect('https://czsmarathon.herokuapp.com');
 
     socket.on('init_data_table_lj', function(data) {
       //init the tab
